@@ -1,10 +1,6 @@
 "use strict";
 
-/**
- *
- * @param source
- */
-exports.load = function load(source) {
+exports.load = function load(source, cb) {
     var app, compound;
     if (typeof source === 'function') {
         app = source();
@@ -16,5 +12,6 @@ exports.load = function load(source) {
 
     compound.init();
 
-    return compound.sapp || app.sapp;
+    var sapp = compound.sapp || app.sapp;
+    sapp.ready(cb);
 };

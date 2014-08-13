@@ -32,19 +32,19 @@ module.exports = function (grunt) {
         var source = resolveSource(options.input);
         var framework = resolveFramework(options.framework);
 
-        var sapp = framework.load(source);
+        framework.load(source, function (sapp) {
+            options.apiUrl = options.apiUrl || sapp.get('rest.url') || '/api';
 
-        options.apiUrl = options.apiUrl || sapp.get('rest.url') || '/api';
+            grunt.log.writeln('Generating %j for the API endpoint %j',
+                options.moduleName,
+                options.apiUrl);
 
-        grunt.log.writeln('Generating %j for the API endpoint %j',
-            options.moduleName,
-            options.apiUrl);
+            var script = generator.services(sapp, options.moduleName, options.apiUrl);
 
-        var script = generator.services(sapp, options.moduleName, options.apiUrl);
+            grunt.file.write(options.output, script);
 
-        grunt.file.write(options.output, script);
-
-        grunt.log.ok('Generated %j services file %j', options.template, options.output);
+            grunt.log.ok('Generated %j services file %j', options.template, options.output);
+        });
     }
 };
 

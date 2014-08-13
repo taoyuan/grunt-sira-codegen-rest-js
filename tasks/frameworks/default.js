@@ -1,9 +1,6 @@
 "use strict";
 
-/**
- *
- * @param source
- */
-exports.load = function load(source) {
-    return source.sapp || source;
+exports.load = function load(source, cb) {
+    var sapp = source.sapp || source;
+    sapp.ready(cb);
 };
