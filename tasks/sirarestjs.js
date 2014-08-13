@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 
         var sapp = framework.load(source);
 
-        options.apiUrl = options.apiUrl || sapp.get('apiUrl') || '/api';
+        options.apiUrl = options.apiUrl || sapp.get('rest.url') || '/api';
 
         grunt.log.writeln('Generating %j for the API endpoint %j',
             options.moduleName,

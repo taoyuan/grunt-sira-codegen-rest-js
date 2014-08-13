@@ -33,8 +33,7 @@ module.exports = function (grunt) {
             simple_default: {
                 options: {
                     input: './test/fixtures/simple/app.js',
-                    output: 'tmp/simple_default.js',
-                    apiUrl: '/rest-api-root'
+                    output: 'tmp/simple_default.js'
                 }
             },
             simple_custom: {
