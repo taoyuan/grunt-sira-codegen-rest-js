@@ -1,11 +1,3 @@
-/*
- * grunt-loopback-sdk-angular
- * https://github.com/strongloop/grunt-loopback-sdk-angular
- *
- * Copyright (c) 2014 StrongLoop, Inc.
- * Licensed under the MIT license.
- */
-
 'use strict';
 
 module.exports = function (grunt) {
