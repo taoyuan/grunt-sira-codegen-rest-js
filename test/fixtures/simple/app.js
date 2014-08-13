@@ -5,7 +5,7 @@ var rest = require('sira-express-rest');
 var sapp = voya({'model public': false, 'modules': [__dirname]});
 sapp.registry.define('Product', {
     public: true,
-    crud: true
+    crud: ["create"]
 });
 sapp.boot();
 

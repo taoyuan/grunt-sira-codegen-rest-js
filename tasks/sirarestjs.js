@@ -31,13 +31,11 @@ module.exports = function (grunt) {
             apiUrl: undefined
         });
 
-        if (!options.input) {
-            grunt.fail.warn('Missing mandatory option "input".');
-        }
-
         if (!options.output) {
             grunt.fail.warn('Missing mandatory option "output".');
         }
+
+        options.input = options.input || path.resolve('./');
 
         var source = resolveSource(options.input);
         var framework = resolveFramework(options.framework);
