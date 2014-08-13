@@ -15,6 +15,8 @@ module.exports = function (grunt) {
     function runTask() {
         /*jshint validthis:true */
 
+        var done = this.async();
+
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
             framework: 'default',
@@ -44,6 +46,8 @@ module.exports = function (grunt) {
             grunt.file.write(options.output, script);
 
             grunt.log.ok('Generated %j services file %j', options.template, options.output);
+
+            done();
         });
     }
 };

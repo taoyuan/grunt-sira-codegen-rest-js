@@ -1,6 +1,6 @@
 {
   "name": "grunt-sira-sdk-rest-js",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Grunt plugin for auto-generating Angular $resource services for Sira Rest API",
   "repository": {
     "type": "git",
