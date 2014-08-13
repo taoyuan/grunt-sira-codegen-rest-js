@@ -1,4 +1,4 @@
-grunt-sira-sdk-rest-angular
+grunt-sira-sdk-rest-js
 ===========================
 
-Grunt plugin for auto-generating Angular $resource services for Sira
+Grunt plugin for auto-generating Javascript services for Sira Rest API

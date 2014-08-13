@@ -1,0 +1,43 @@
+{
+  "name": "grunt-sira-sdk-rest-js",
+  "version": "0.0.1",
+  "description": "Grunt plugin for auto-generating Angular $resource services for Sira Rest API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taoyuan/grunt-sira-sdk-rest-js.git"
+  },
+  "author": "Tao Yuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taoyuan/grunt-sira-sdk-rest-js/issues"
+  },
+  "homepage": "https://github.com/taoyuan/grunt-sira-sdk-rest-js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "resolve": "^1.0.0",
+    "sira-sdk-rest-js": "git://github.com/taoyuan/sira-sdk-rest-js"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "express": "^4.8.3",
+    "grunt": "^0.4.2",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-exec": "^0.4.6",
+    "sira-express-rest": "taoyuan/sira-express-rest",
+    "voya": "taoyuan/voya"
+  },
+  "peerDependencies": {
+    "grunt": "^0.4.2"
+  },
+  "keywords": [
+    "gruntplugin",
+    "angular",
+    "sira",
+    "rest"
+  ]
+}

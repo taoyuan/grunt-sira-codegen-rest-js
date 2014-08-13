@@ -1,0 +1,6 @@
+{
+    "user": {
+        "public": true,
+        "crud": true
+    }
+}
