@@ -2,7 +2,7 @@
 
 var path = require('path');
 var resolve = require('resolve');
-var generator = require('sira-sdk-rest-js');
+var generator = require('sira-codegen-rest-js');
 
 module.exports = function (grunt) {
 
@@ -39,9 +39,16 @@ module.exports = function (grunt) {
 
             grunt.log.writeln('Generating %j for the API endpoint %j',
                 options.moduleName,
-                options.apiUrl);
+                options.apiUrl
+            );
 
-            var script = generator.services(sapp, options.moduleName, options.apiUrl);
+
+            var script = generator.generate({
+                moduleName: options.moduleName,
+                url: options.apiUrl,
+                metadata: sapp,
+                resultful: options.resultful
+            });
 
             grunt.file.write(options.output, script);
 
