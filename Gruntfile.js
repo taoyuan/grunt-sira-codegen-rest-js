@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                     input: './test/fixtures/simple/app.js',
                     output: 'tmp/simple_custom.js',
                     moduleName: 'customServices',
-                    apiUrl: 'http://custom/api'
+                    apiUrl: 'http://custom/api/'
                 }
             },
             compound: {
