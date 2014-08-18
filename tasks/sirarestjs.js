@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             framework: 'default',
             moduleName: 'siras',
             template: 'angular',
-            apiUrl: undefined
+            url: undefined
         });
 
         if (!options.output) {
@@ -35,17 +35,17 @@ module.exports = function (grunt) {
         var framework = resolveFramework(options.framework);
 
         framework.load(source, function (sapp) {
-            options.apiUrl = options.apiUrl || sapp.get('rest.url') || '/api';
+            options.url = options.url || sapp.get('rest.url') || '/api';
 
             grunt.log.writeln('Generating %j for the API endpoint %j',
                 options.moduleName,
-                options.apiUrl
+                options.url
             );
 
 
             var script = generator.generate({
                 moduleName: options.moduleName,
-                url: options.apiUrl,
+                url: options.url,
                 metadata: sapp,
                 resultful: options.resultful
             });

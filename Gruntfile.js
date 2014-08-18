@@ -41,14 +41,19 @@ module.exports = function (grunt) {
                     input: './test/fixtures/simple/app.js',
                     output: 'tmp/simple_custom.js',
                     moduleName: 'customServices',
-                    apiUrl: 'http://custom/api/'
+                    url: 'http://custom/api/'
                 }
             },
             compound: {
+                // !!! all valuable options is here
                 options: {
-                    framework: 'compound',
-                    input: './test/fixtures/coapp',
-                    output: 'tmp/coapp.js'
+                    framework: 'compound', // the framework for input, currently support `default` and `framework`
+                    input: './test/fixtures/coapp', // the input module for sira app
+                    output: 'tmp/coapp.js', // the sdk output file
+                    moduleName: 'siras', // the service module name
+                    url: 'http://coapp/api', // the api base url
+                    resultful: true, // true for all response data will be wrapped into object
+                    description: '' // the service module description
                 }
             }
         },

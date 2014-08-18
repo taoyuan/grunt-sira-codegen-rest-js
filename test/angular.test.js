@@ -56,8 +56,7 @@ exports.sirarestjs = {
 
         // the value "siras" is the --module-name default
         test.equal(s.ngModuleName(script), 'siras');
-        // the value "/rest-api-root" is hard-coded in fixtures/app.js
-        test.equal(s.baseUrl(script), '/api');
+        test.equal(s.baseUrl(script), 'http://coapp/api');
         test.done();
     },
 };
